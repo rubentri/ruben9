@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Undefined itu adalah sesuatu variable yang belum didefinisikan  -->
+
+    <script>
+      // Jadi jika variable tidak ada maka UNDEFINED dan kebalikan nya jika variable terisi maka data akan DEFINED //
+      /*  let nama;
+      if (nama === undefined) {
+        alert("UNDEFINED");
+      } else {
+        alert("DEFINED");
+      }   */
+
+      // Menggunakan array
+      const names = ["Ruben", "Tri"];
+      if (names[2] === undefined) {
+        console.log("ARRAY UNDEFINED");
+      } else {
+        console.log("ARRAY DEFINED");
+      }
+
+      // Menggunakan Object
+      const person = {
+        nama: "Ruben",
+        usia: 19,
+      };
+      if (person.usia === undefined) {
+        console.log("OBJECT UNDEFINED");
+      } else {
+        console.log("OBJECT DEFINED");
+      }
+    </script>
+  </body>
+</html>

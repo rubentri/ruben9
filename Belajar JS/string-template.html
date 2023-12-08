@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // String Template NAMA
+
+      const name = "Ruben tri ardian saputra";
+      const template = `Name : ${name}`;
+      console.info(template);
+
+      // Ulang Tahun
+      const day = 9;
+      const month = "Januari";
+      const year = 2004;
+
+      const birth = `My birthday : ${day} ${month} ${year}`;
+      console.info(birth);
+
+      // Nilai Ujian
+      const nama = "Ruben tri ardian saputra";
+      const value = 90;
+
+      const Lulus = `Nama : ${nama}, Lulus : ${value > 75}; `;
+      console.info(Lulus);
+
+      // Multiline String menggunakan backtip ``
+      // menggunakan tag <pre> </pre>
+
+      const multiLine = `Nama saya ruben,
+saya kuliah di uniska,
+saat ini saya sedang
+belajar javascript 
+dari youtube channel
+progammer zaman now`;
+
+      document.writeln("<pre>");
+      document.writeln(multiLine);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

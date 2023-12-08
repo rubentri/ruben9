@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function* createNames() {
+        yield "Ruben";
+        yield "Tri";
+        yield "A.S";
+      }
+      const names = createNames();
+      for (const name of names) {
+        console.log(name);
+      }
+
+      // Function Generator Kompleks
+      // Lazy
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Yield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      // Eager
+      function buatGanjilArray(value) {
+        const result = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.log(`Yield ${i}`);
+            result.push(i);
+          }
+        }
+        return result;
+      }
+
+      const numbers = buatGanjilArray(100);
+      for (const number of numbers) {
+        console.log(number);
+      }
+
+      // Kode: Lazy generator
+      const angkaGanjil = buatGanjil(100);
+      console.log(angkaGanjil.next().value);
+      console.log(angkaGanjil.next().value);
+      console.log(angkaGanjil.next().value);
+      console.log(angkaGanjil.next().value);
+    </script>
+  </body>
+</html>

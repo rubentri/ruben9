@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Geter -> Mengambil Data
+      // Seter -> Mengubah Data
+
+      // Kode Geter
+      const person = {
+        firstName: "Setia",
+        lastName: "Budi",
+        // Getter
+        get fullName() {
+          return `${this.firstName} ${this.lastName} `;
+        },
+        // Setter
+        set fullName(value) {
+          const array = value.split(" ");
+          this.firstName = array[0];
+          this.lastName = array[1];
+        },
+      };
+      // Otomatis memanggil get fullName();
+      person.fullName = "Ruben TAS";
+      console.table(person);
+
+      person.fullName = "Budi Nugraha";
+      console.table(person);
+
+      person.fullName = "Setia Udin";
+      console.table(person);
+    </script>
+  </body>
+</html>

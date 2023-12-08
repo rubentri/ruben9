@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Global Scoope
+      let counter = 0;
+
+      // Global Scoope
+      function hitMe() {
+        // Local scoope yang dalam kurung kurawal
+        counter++;
+      }
+
+      // Global Scoope
+      function other() {
+        // Local Scoope
+      }
+      hitMe();
+      hitMe();
+      console.log(counter);
+
+      // Contoh lainya
+      function first() {
+        // Local Scoope
+        let firstVariable = "first";
+
+        function firstNested() {
+          console.info(firstVariable);
+        }
+        firstNested();
+      }
+
+      function second() {
+        // Local scoope
+        let secondVariable = "Second";
+        // console.log(firstVariable); // error
+      }
+      first();
+      second();
+      // console.log(firstVariable); // hanya bisa diakses di local scoope nya
+      // console.log(secondVariable); // error
+    </script>
+  </body>
+</html>

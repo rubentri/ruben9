@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 3:46:00 PZN
+      // Pengecekan menggunakan IF //
+      const person = {
+        addres: {
+          country: "Indonesia",
+        },
+      };
+      /*let country;
+       if (person.addres !== undefined && person.addres !== null) {
+        country = person.addres.country;
+      }
+      document.writeln(`<p>${country}</p>`); */
+
+      // Menggunakan Chaning Optional
+
+      let country = person?.addres?.country;
+      document.writeln(`<p>${country}</p>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function Anonymus ini bakal sering digunakan untuk membuat project project
+      // Anonymus dalam Variable
+      const say = function (name) {
+        document.writeln(`<p>Hallo ${name}</p>`);
+      };
+      // memanggil
+      say("Ruben");
+      say("Tri");
+      say("Ardian");
+      say("Saputra");
+
+      // Anonymus dalam parameter
+      function giveMeName(callback) {
+        callback("Ujang");
+      }
+      giveMeName(say);
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>

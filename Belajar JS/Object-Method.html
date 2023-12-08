@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Membuat object dengan Method
+      //   Contoh 1
+      const person = {
+        name: "Ruben",
+        sayHello: function (name) {
+          document.writeln(`Halo ${name}`);
+        },
+      };
+      person.sayHello("Ruben");
+
+      // Contoh 2
+      const orang = {
+        nama: "Ruben",
+      };
+      orang.sayHallo = function (nama) {
+        document.writeln(`<p>Hai ${nama}</p>`);
+      };
+
+      orang.sayHallo("Ardi");
+    </script>
+  </body>
+</html>

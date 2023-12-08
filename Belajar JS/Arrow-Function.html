@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const sayHello = (name) => {
+        const say = `Hello ${name}`;
+        console.info(say);
+      };
+      sayHello("Ruben");
+
+      // Arrow Function Tanpa Blok {}
+      // Hanya berlaku satu baris
+      const sayHallo = (name) => console.log(`Hello ${name}`);
+      sayHallo("Ardi");
+
+      // Arrow Function return value
+      // Jika menggunakan block, perlu menggunakan return
+      // Jika tidak pake block, maka tidak perlu return
+      const sum = (first, second) => first + second;
+      console.log(sum(10, 10));
+
+      // Contoh normal
+      const tambah = (satu, dua) => {
+        return satu + dua;
+      };
+      console.log(tambah(100, 100));
+
+      // Arrow Function tanpa kurung parameter
+      // dan hanya bisa satu parameter saja tidak jika lebih dari satu contoh firstName, lastName, maka ini akan error!!!
+      const hallo = (name) => console.log(`Hallo ${name}`);
+      hallo("TAYO");
+
+      // Arrow Function sebagai parameter
+      function giveMeName(callback) {
+        callback("Critiano Siuuuuuu");
+      }
+      giveMeName((name) => console.log(`GAOT ${name}`)); // <- tanpa parameter
+
+      // Arrow function ini hampir mirip dengan Anonymus Function // Contoh nya:
+      giveMeName(function (name) {
+        console.info(`Gaot ${name}`);
+      }); // <- Ini contoh dari anonymus function
+    </script>
+  </body>
+</html>

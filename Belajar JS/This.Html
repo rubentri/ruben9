@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this di Global scope
+      console.info(this);
+
+      function sample() {
+        console.log(this);
+
+        function inner() {
+          console.log(this);
+        }
+        inner();
+      }
+      sample();
+
+      // Kode This di object method
+      const person = {
+        name: "Ruben",
+        sayHallo: function (name) {
+          console.info(`Hello ${name} My name is  ${this.name}`);
+        },
+      };
+      person.sayHallo("OJAK");
+    </script>
+  </body>
+</html>

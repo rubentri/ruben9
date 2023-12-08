@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // jadi kalau ingin memasukan data sekaligus banyak gunakan .push dan array ini juga bisa semua tipe data
+      let arrayKosong = [];
+      let arrayNama = ["Ruben", "Tri", "A.S"];
+
+      const names = [];
+      // Kode Operasi Channel PZN ->2:24:05
+      names.push("Ruben");
+      names.push("tri", "ardian", "saputra");
+      names.push("ica", "budi", "joko", "idang", "joo", "zidane", "putra");
+      names.push(true, false, 120, 1.1, "ya");
+
+      console.table(names);
+
+      // Memanggil Array
+      console.info(names[0]);
+      console.info(names[1]);
+      console.info(names[2]);
+      console.info(names[3]);
+
+      // Mengubah Array
+      names[3] = "Ica Dirubah Menjadi Aci";
+      names[13] = "diubah ke";
+      names[14] = "diubah";
+      console.table(names);
+
+      // Menghapus Array
+      // Jika Array dihapus maka posisi index akan tetap sama dan tidak akan berubah //
+      delete names[0];
+      delete names[10];
+      delete names[15];
+      delete names[4];
+      delete names[7];
+      delete names[2];
+      console.table(names);
+
+      // Bukan Berarti ketika di delete tidak bisa digunakan lagi
+      // Memasukan Array yang telah dihapus tinggal diubah saja
+
+      // Seperti ini ->
+      names[0] = "Ruben";
+      names[2] = "Ardian";
+
+      names.push(["ruben", "tri", "a.s"]);
+      console.table(names);
+    </script>
+  </body>
+</html>

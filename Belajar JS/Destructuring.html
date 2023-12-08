@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Kode array biasa
+      {
+        let names = ["Ruben", "Tri", "Ardian"];
+        let firstName = names[0];
+        let middleName = names[1];
+        let lastName = names[2];
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+      }
+      {
+        // Kode Destructuring
+        const nama = ["Eko", "Budi", "Setia", "Amat", "Joko"];
+        const [namaPertama, namaTengah, namaAkhir, ...others] = nama;
+        console.log(namaPertama);
+        console.log(namaTengah);
+        console.log(namaAkhir);
+        console.log(others);
+      }
+
+      // Kode mengambil data
+      {
+        let person = {
+          firstName: "Ruben",
+          middleName: "Tri",
+          lastName: "A.S",
+          address: {
+            street: "Jalan Bandarmasih",
+            city: "Banjarmasin",
+            country: "Indonesia",
+          },
+          hobby: "Game",
+          socialMedia: "Instagram @rubentri_",
+        };
+        let {
+          firstName,
+          middleName,
+          lastName,
+          address: { city, street, country },
+          ...others
+        } = person;
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        console.log(city);
+        console.log(street);
+        console.log(country);
+        console.log(others);
+      }
+      {
+        // Destrucuturing di Function Parameter 1
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.log(firstName);
+          console.log(middleName);
+          console.log(lastName);
+        }
+        const person = {
+          firstName: "Layla",
+          middleName: "Nur",
+          lastName: "Icawati",
+        };
+        displayPerson(person);
+      }
+      {
+        function sum(array) {
+          return array[0] + array[1];
+        }
+        console.info(sum([1, 1]));
+        console.info(sum([10, 10]));
+      }
+      {
+        // Default Value Destructuring Array
+        const names = ["Budi", "Joko"]; //-> Jika data kosong maka akan diisi default value
+        const [firstName, middleName = "Nugroho", lastName = "Pancajaya"] =
+          names;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+      {
+        // Default Value Destructuring Object
+        const person = {
+          firstName: "Ardi",
+          lastName: "Ujang",
+        };
+        const { firstName, middleName = "Tri", lastName } = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+      {
+        // Menggunakan Nama Variable Lain
+        const person = {
+          firstName: "Setiawan",
+          middleName: "Dicaprio",
+          lastName: "Tayo",
+        };
+        let {
+          firstName: namaPertama,
+          middleName: namaTengah = "Cr7",
+          lastName: namaAkhir,
+        } = person;
+        console.info(namaPertama);
+        console.info(namaTengah);
+        console.info(namaAkhir);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Biasa
+      function sayHello(name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      }
+      sayHello("Ruben");
+
+      // Menggunakan function sbg value
+      // tidak perlu lagi menggunakan ()
+      const say = sayHello;
+      say("Ujang");
+
+      // Kode Function di parameter
+      function giveMeName(callback) {
+        callback("Bentas"); // sayHello("Bentas")
+      }
+      giveMeName(sayHello);
+      giveMeName(say); // sama aja dengan -> giveMeName(sayHello)
+    </script>
+  </body>
+</html>

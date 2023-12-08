@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Progammer Zaman Now -->
+    <!-- Youtube channel menit 2:05:01 -  -->
+    <script>
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}</p>`);
+
+      //parseInt
+      document.writeln(`<p>parseInt =${parseInt("1.1")}</p>`);
+      //parseFloat
+      document.writeln(`<p>parseFloat =${parseFloat("1.1")}</p>`);
+      // Number
+      document.writeln(`<p>Number =${Number("1.1")}</p>`);
+      // toString()
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString();
+      document.writeln(`<p>toString =${total}</p>`);
+
+      // NaN
+      // parseInt dan parseFloat itu masih mentoleransi jika yang salah dibelakang angka dan tidak didepan angka
+      // sedangkan number tidak mentoleransi sedikitpun kesalahan
+
+      document.writeln(`<p>parseInt =${parseInt("p")}</p>`);
+      //parseFloat
+      document.writeln(`<p>parseFloat =${parseFloat("1p")}</p>`);
+
+      document.writeln(`<p>Number =${Number("1p")}</p>`);
+      document.writeln(`<p>Number =${Number("1.1")}</p>`);
+      document.writeln(`<p>Number =${Number("salah")}</p>`);
+
+      // Kode Operasi pada NaN
+      const val1 = Number("salah"); //NaN
+      const val2 = 100;
+      const val3 = val1 + val2; // hasil nya NaN
+      document.writeln(`<p>val3 = ${val3}</p>`);
+
+      // isNaN function
+      // jika NaN true , jika bukan false
+      document.writeln(`<p>val1 = ${isNaN(val1)}</p>`);
+      document.writeln(`<p>val2 = ${isNaN(100)}</p>`);
+      document.writeln(`<p>val2 = ${isNaN(NaN)}</p>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Murid(namaLengkap, kelas, jurusan, hobi) {
+            // property
+            this.namaLengkap = namaLengkap;
+            this.kelas = kelas;
+            this.jurusan = jurusan;
+            this.hobi = hobi;
+          
+            // method
+            this.perkenalanDiri = function() {
+              console.log('nama saya ' + this.namaLengkap + ', saya kelas ' + this.kelas + ' jurusan ' + this.jurusan + ' dan hobi saya adalah ' + this.hobi);
+            }
+          };
+          
+          var murid = new Murid("Fauzan Harun", "X", "Perkantoran", "Berpetualang");
+          
+          murid.perkenalanDiri();
+    </script>
+</body>
+</html>

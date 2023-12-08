@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Ubah property / Atribut
+      const person = {};
+      person["nama"] = "Ruben TAS";
+      person["alamat"] = "Jalan Bandarmasih BJM";
+      person["umur"] = 19;
+      console.table(person);
+
+      // Delete Kurang lebih sama seperti array
+      delete person["alamat"];
+      console.table(person);
+
+      //Kode : membuat object dengan properties
+      const univ = {
+        // jadi penggunaan string itu ada saat nya ketika membutuhkan spasi seperti contoh dibawah "nama mahasiswa" dan mahasiswa //
+        "nama mahasiswa": "ruben",
+        mahasiswa: "tri a.s",
+        npm: 2210010485,
+        prodi: "Teknik Informatika",
+        kelas: "3N reguler pagi",
+      };
+      console.table(univ);
+
+      // Pemanggilan Kode //
+      const orang = {
+        "nama mahasiswa": "RUBEN SAJA",
+        name: "Ruben tri a.s",
+        addres: "Jalan bandarmasih",
+        age: 19,
+      };
+      console.info(`Mahasiswa : ${orang["nama mahasiswa"]}`);
+      console.info(`Nama : ${orang.name}`);
+      console.info(`Alamat : ${orang.addres}`);
+      console.info(`Umur : ${orang.age}`);
+    </script>
+  </body>
+</html>
