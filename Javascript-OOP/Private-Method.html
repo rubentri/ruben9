@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // # ->->-> hanya bisa diakses dalam class itu sendiri
+      class Person {
+        say(name) {
+          if (name) {
+            this.#sayWithName(name);
+          } else {
+            this.#sayWithoutName();
+          }
+        }
+
+        #sayWithoutName() {
+          console.log("Hello");
+        }
+        #sayWithName(name) {
+          console.log(`Hello ${name}`);
+        }
+      }
+      const ruben = new Person();
+      ruben.say("Udin");
+
+      //   ruben.#sayWithoutName; // ini bersifat Private dan tidak bisa diakses
+    </script>
+  </body>
+</html>

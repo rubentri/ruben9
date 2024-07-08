@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {}
+      // bisa menggunakan class Inheritance
+      class Manager extends Employee {}
+
+      const budi = new Employee();
+      const ruben = new Manager();
+
+      console.log(typeof budi);
+      console.log(typeof ruben);
+
+      console.log(budi instanceof Employee); //true
+      console.log(budi instanceof Manager); //false
+
+      console.log(ruben instanceof Employee); //false  -> extends -> true
+      console.log(ruben instanceof Manager); //true
+    </script>
+  </body>
+</html>

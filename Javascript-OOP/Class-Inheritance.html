@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        sayHello(name) {
+          console.log(`Hello ${name}, My name is employee ${this.name}`);
+        }
+      }
+
+      class Manager extends Employee {
+        // sayHello(name) {
+        //   console.log(`Hello ${name}, My name is manager ${this.name}`);
+        // }
+      }
+      // extends Employee, jika tidak di pake maka akan error
+
+      const budi = new Employee();
+      budi.name = "Budi";
+      budi.sayHello("Joko");
+
+      const ruben = new Manager();
+      ruben.name = "Ruben";
+      ruben.sayHello("Joko");
+
+      console.log(budi);
+      console.log(ruben);
+    </script>
+  </body>
+</html>

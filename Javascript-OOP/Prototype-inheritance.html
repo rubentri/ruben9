@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Prototype ini sebenarnya sudah tidak disarankan lagi
+      function Employee(name) {
+        this.name = name;
+      }
+
+      function Manager(name) {
+        this.name = name;
+      }
+      // Manager.prototype = Employee.prototype; ->salah
+
+      //Benar
+      // Object.create
+      Manager.prototype = Object.create(Employee.prototype);
+
+      Manager.prototype.sayHello = function (name) {
+        console.log(`Hello ${name} My name is Manager ${this.name}`);
+      };
+
+      Employee.prototype.sayHello = function (name) {
+        console.log(`Hello ${name} My name is Employee ${this.name}`);
+      };
+
+      const employee = new Employee("Ujang");
+      employee.sayHello("Joko");
+
+      const manager = new Manager("Ardi");
+      manager.sayHello("Joko");
+
+      console.log(employee);
+      console.log(manager);
+    </script>
+  </body>
+</html>

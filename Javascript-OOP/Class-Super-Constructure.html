@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Employee
+      class Employee {
+        constructor(firstName) {
+          this.firstName = firstName;
+        }
+        sayHello(name) {
+          console.log(`Hello ${name}, My name is employee ${this.firstName}`);
+        }
+      }
+
+      // Manager
+      class Manager extends Employee {
+        constructor(firstName, middleName, lastName) {
+          super(firstName);
+          //firstName sudah masuk ke Constructure Employee
+          this.lastName = lastName;
+          this.middleName = middleName;
+        }
+        sayHello(name) {
+          console.log(
+            `Hello ${name}, My name is manager ${this.firstName} ${this.middleName} ${this.lastName}`
+          );
+        }
+      }
+
+      const budi = new Employee("Budi");
+      budi.sayHello("Joko");
+
+      const ruben = new Manager("Ruben", "Tri", "A.S");
+      ruben.sayHello("Joko");
+
+      console.log(budi);
+      console.log(ruben);
+    </script>
+  </body>
+</html>

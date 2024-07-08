@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Constractor Function
+
+      // Diawali dengan Kapital
+      // Bisa dianggap class
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.info(`hello ${name}, my name is ${this.firstName}`);
+        };
+      }
+
+      // dan ini adalah object nya
+      // Budi
+      const budi = new Person("Budi", "Ujang");
+      budi.sayHello("Joko");
+
+      // Udin
+      const udin = new Person("Udin", "Nganga");
+      udin.sayHello("Joko");
+
+      console.log(budi);
+      console.log(udin);
+    </script>
+  </body>
+</html>
